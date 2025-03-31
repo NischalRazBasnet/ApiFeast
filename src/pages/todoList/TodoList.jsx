@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 export default function Home() {
@@ -34,6 +34,13 @@ export default function Home() {
       <h1 className='text-center text-5xl underline underline-offset-8 tracking-wider'>
         Todo Lists
       </h1>
+      <div className=' mx-auto w-[900px]'>
+        <div className='bg-slate-400 py-1 rounded-lg grid grid-cols-[1fr_3fr_1fr] place-items-center'>
+          <h2>User</h2>
+          <h2 className='place-self-start'>Title</h2>
+          <h2>Status</h2>
+        </div>
+      </div>
       {data &&
         data.map((todo) => {
           return (
